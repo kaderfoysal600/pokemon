@@ -39,7 +39,7 @@ const CardOneContainer = styled.div`
     background-color: #fff;
     border-radius: 4px;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 83% 100%, 0 100%);
-    padding: 100px 0;
+    padding: 20px 10px;
     .img-text {
       padding: 10px;
       position: relative;
@@ -72,7 +72,7 @@ const CardOneContainer = styled.div`
     .btn-group {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 5px;
       a {
         padding: 3px 7px;
