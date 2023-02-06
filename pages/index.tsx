@@ -52,7 +52,7 @@ export default function Home() {
         <div className="data-card-main">
           <div className="tex"></div>
           <div className="poc-img">
-            <img src="/assets/Logo.png" alt="" />
+            <img src="/Logo.png" alt="" />
           </div>
           <div className="data-card">
             {data.map((data: any) => {

@@ -9,7 +9,7 @@
 }
 
 .data-card-main {
-  background-image: url(/assets/Background.png);
+  background-image: url(/Background.png);
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -18,7 +18,7 @@
   padding: 100px 0;
 }
 .tex {
-  background-image: url(/assets/Texture.png);
+  background-image: url(/Texture.png);
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
