@@ -6,10 +6,18 @@ import styled from "styled-components";
 
 const CardOne: NextPage<any> = ({ data }: any) => {
   const router = useRouter();
-
+ 
+  const seeDetails = (url: any) => {
+    router.push({
+        pathname: '/details',
+        query: { url }
+    })
+}
   return (
-    <CardOneContainer >
-      <div className="main-card">
+
+    <CardOneContainer>
+      <div className="main-card" onClick={()=>{seeDetails(data.url)}}>
+
         <div className="img-text">
           <img src={data.image} alt="" />
           <span>#010</span>
