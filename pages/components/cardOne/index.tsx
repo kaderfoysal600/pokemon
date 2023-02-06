@@ -8,7 +8,7 @@ const CardOne: NextPage<any> = ({ data }: any) => {
   const router = useRouter();
 
   return (
-    <CardOneContainer>
+    <CardOneContainer >
       <div className="main-card">
         <div className="img-text">
           <img src={data.image} alt="" />
