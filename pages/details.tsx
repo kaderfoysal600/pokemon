@@ -1,35 +1,14 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const PokeMonDetails: NextPage = () => {
   const router = useRouter();
+  const [details, setDetails] = useState({});
 
   useEffect(() => {
     if (router.query.url) {
-      console.warn(router.query.url);
-      // Update the document title using the browser API
-    const gqlQuery = `query pokemons($limit: Int, $offset: Int) {
-        pokemons(limit: $limit, offset: $offset) {
-          count
-          next
-          previous
-          status
-          message
-          results {
-            url
-            name
-            image
-          }
-        }
-      }`;
-  
-      const gqlVariables = {
-        limit: 10,
-        offset: 1,
-      };
-  
       fetch(router.query.url as any, {
         credentials: "omit",
         headers: { "Content-Type": "application/json" },
@@ -37,7 +16,9 @@ const PokeMonDetails: NextPage = () => {
         method: "GET",
       })
         .then((res) => res.json())
-        .then((res) => console.log(res));
+        .then((res) =>{
+          setDetails(res)
+        });
     }
   }, []);
 
