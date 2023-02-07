@@ -1,8 +1,6 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
-
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -51,4 +49,23 @@
 .poc-img img {
   max-width: 220px;
   margin: auto;
+}
+
+.mobile-slider {
+  display: none;
+  margin-left: -20px !important;
+}
+@media (max-width: 960px) {
+  .mobile-slider {
+    display: block;
+    padding: 15px 0;
+    /* .swiper-slide{
+      width: 77%!important;
+      
+    } */
+  }
+
+  .data-card {
+    display: none;
+  }
 }
