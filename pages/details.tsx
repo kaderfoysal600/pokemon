@@ -30,6 +30,9 @@ const PokeMonDetails: NextPage<any> = ({ data }: any) => {
     <DetaisContainer>
       <div className="main-contents">
         <div className="container">
+          <div className="poc-img">
+            <img src="/Logo.png" alt="" />
+          </div>
           <div className="tex"></div>
           <div className="poc-img">
             {/* <Image src={Pokemon} alt="" width={600}/> */}
@@ -73,8 +76,12 @@ const PokeMonDetails: NextPage<any> = ({ data }: any) => {
                 </div>
               </div>
             </div>
-            <div>
-              <img src={details?.sprites?.front_default} alt="" />
+            <div className="detail-img-container">
+              <img
+                className="detail-img"
+                src={details?.sprites?.front_default}
+                alt=""
+              />
             </div>
             <div>
               <div>
@@ -126,7 +133,9 @@ const PokeMonDetails: NextPage<any> = ({ data }: any) => {
           <div className="back_btn">
             <button className="back_button">
               <i className="fa-solid fa-house"></i>
-              <Link href="/">Back to Homepage</Link>
+              <Link className="link" href="/">
+                Back to Homepage
+              </Link>
             </button>
           </div>
         </div>
@@ -142,7 +151,7 @@ const DetaisContainer = styled.div`
   }
   .container {
     display: block;
-    max-width: 1400px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
   }
@@ -164,6 +173,10 @@ const DetaisContainer = styled.div`
     border-width: 5px;
     border-image-source: linear-gradient(to left, #fa7841, #f468ac);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 83% 100%, 0 100%);
+    /* display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px; */
   }
 
   .gress-btn {
@@ -261,15 +274,25 @@ const DetaisContainer = styled.div`
   i {
     padding-right: 10px;
   }
-  .h-three {
-    line-height: 2px;
-  }
 
-  .p1 {
-    line-height: 3px;
+  .detail-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .detail-img {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
   }
   .item2-text2 {
     margin-right: 4px;
+  }
+  .link {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
   }
 `;
 
