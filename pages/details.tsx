@@ -86,7 +86,7 @@ const PokeMonDetails: NextPage<any> = ({ data }: any) => {
             <div>
               <div>
                 <h2>Type</h2>
-                <div>
+                <div className="padding">
                   {details &&
                     details.types &&
                     details.types.length &&
@@ -102,7 +102,7 @@ const PokeMonDetails: NextPage<any> = ({ data }: any) => {
 
               <div>
                 <h2>Weaknesses</h2>
-                <div>
+                <div className="padding">
                   <button className="fire-btn">Fire</button>
                   <button className="psychic-btn">Psychic</button>
                   <button className="flying-btn">Flying</button>
@@ -145,6 +145,12 @@ const PokeMonDetails: NextPage<any> = ({ data }: any) => {
 };
 
 const DetaisContainer = styled.div`
+  button {
+    cursor: pointer;
+  }
+  .padding {
+    padding: 15px 0;
+  }
   .main-contents {
     margin: 0 5%;
     padding: 20px 0;
@@ -173,10 +179,6 @@ const DetaisContainer = styled.div`
     border-width: 5px;
     border-image-source: linear-gradient(to left, #fa7841, #f468ac);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 83% 100%, 0 100%);
-    /* display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 40px; */
   }
 
   .gress-btn {

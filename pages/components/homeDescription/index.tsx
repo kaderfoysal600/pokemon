@@ -153,10 +153,10 @@ const HomeDescription: NextPage<any> = () => {
           </div>
         </div>
         <div className="shape1">
-        <Image src={Left} alt="none" />
+          <Image src={Left} alt="none" />
         </div>
         <div className="shape2">
-        <Image src={Left} alt="none" />
+          <Image src={Left} alt="none" />
         </div>
       </div>
     </HomeDescriptionContainer>
@@ -194,8 +194,8 @@ const HomeDescriptionContainer = styled.div`
     width: 100%;
     height: 100%;
     z-index: -10;
-    img{
-      width:60px;
+    img {
+      width: 60px;
     }
   }
 
@@ -207,8 +207,8 @@ const HomeDescriptionContainer = styled.div`
     width: 100%;
     height: 100%;
     z-index: -10;
-    img{
-      width:60px;
+    img {
+      width: 60px;
     }
   }
   .section-1-title-area {
@@ -247,7 +247,7 @@ const HomeDescriptionContainer = styled.div`
   }
   .section-1-main {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     grid-template-rows: auto;
     margin: 0 auto;

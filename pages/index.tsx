@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import CardOne from "./components/cardOne";
 import HomeDescription from "./components/homeDescription";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation, Pagination } from "swiper";

@@ -51,14 +51,8 @@ const CardOne: NextPage<any> = ({ data }: any) => {
 
 const CardOneContainer = styled.div`
   .main-card {
-    /* position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; */
     max-width: 190px;
     max-height: 220px;
-    /* gap: 5px; */
     width: 100%;
     box-sizing: border-box;
     background-color: #fff;
@@ -70,7 +64,6 @@ const CardOneContainer = styled.div`
       position: relative;
       background-color: #f2f2f2;
       border-radius: 4px;
-      /* width: 100%; */
       display: flex;
       align-items: center;
       justify-content: center;
