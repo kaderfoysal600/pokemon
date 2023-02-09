@@ -6,26 +6,43 @@ import styled from "styled-components";
 
 const CardOne: NextPage<any> = ({ data }: any) => {
   const router = useRouter();
- 
+
   const seeDetails = (url: any) => {
     router.push({
-        pathname: '/details',
-        query: { url }
-    })
-}
+      pathname: "/details",
+      query: { url },
+    });
+  };
   return (
-
     <CardOneContainer>
-      <div className="main-card" onClick={()=>{seeDetails(data.url)}}>
-
+      <div
+        className="main-card"
+        onClick={() => {
+          seeDetails(data.url);
+        }}
+      >
         <div className="img-text">
           <img src={data.image} alt="" />
           <span>#010</span>
         </div>
         <p className="name">{data.name}</p>
         <div className="btn-group">
-          <a className="green">Grass</a>
-          <a className="pink">Poison</a>
+          <a
+            className="green"
+            onClick={() => {
+              seeDetails(data.url);
+            }}
+          >
+            Grass
+          </a>
+          <a
+            className="pink"
+            onClick={() => {
+              seeDetails(data.url);
+            }}
+          >
+            Poison
+          </a>
         </div>
       </div>
     </CardOneContainer>
@@ -89,6 +106,7 @@ const CardOneContainer = styled.div`
         color: #fff;
         border-radius: 3px;
         font-size: 14px;
+        cursor: pointer;
       }
       .green {
         background-color: #9bcc50;
